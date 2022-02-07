@@ -512,6 +512,9 @@ body {
 	display: flex;
 	align-items: center;
 }
+.footer {
+	padding: 0px 0px 30px;
+}
 
 /* Modal */
 
@@ -521,6 +524,14 @@ body {
 /* Responsive */
 
 @media(max-width:1024px) {
+	.cases__items {
+		display: flex;
+		align-items: center;
+		max-width: 790px;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0 auto;
+  }
 	.body {
 		font-size: 12px;
 		line-height: 22px;
@@ -915,6 +926,7 @@ body {
 		display: flex;
 		align-items: center;
 	}
+	
  
 }
 
