@@ -276,6 +276,9 @@ body {
 	display: block;
 	transform: translateY(-55px);
 }
+.cases__item:nth-child(4) .cases__item-img  {
+	object-fit: cover;
+}
 .cases__item-box {
 	padding:0px 30px 30px;
 }
