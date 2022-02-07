@@ -248,6 +248,10 @@ body {
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 100px;
+	
+}
+.cases__item:nth-child(1) .cases__item-box {
+	margin-top: -40px;
 }
 .cases__item::after {
 	content: '';
@@ -275,6 +279,7 @@ body {
 .cases__item-box {
 	padding:0px 30px 30px;
 }
+
 .cases__item-title {
 	font-weight: 600;
 	font-size: 36px;
@@ -524,6 +529,9 @@ body {
 /* Responsive */
 
 @media(max-width:1024px) {
+	.cases__item:nth-child(1) .cases__item-box {
+		margin-top: 0px;
+	}
 	.cases__items {
 		display: flex;
 		align-items: center;
