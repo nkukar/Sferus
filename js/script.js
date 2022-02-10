@@ -21,33 +21,7 @@ modalBtns.forEach(item => {
 
 // Слайдер в  products
 
-const sliderBtns = document.querySelectorAll('.products-btn'),
-		sliderContents = document.querySelectorAll('.products__item');
 
-function hide () {
-		sliderBtns.forEach(item => {
-			item.classList.remove('products-btn--active');
-
-		})
-		sliderContents.forEach(items => {
-			items.style.display = 'none';
-		})
-
-};
-
-
-function showContent (i = 0) {
-	sliderContents[i].style.display = 'block';
-	sliderBtns[i].classList.add('products-btn--active');
-	
-}
-showContent();
-sliderBtns.forEach ((item,index) => {
-	item.addEventListener('click', () => {
-		hide();
-		showContent(index)
-	})
-})
 
 
 
@@ -134,101 +108,316 @@ formBtn.addEventListener('click', (e) => {
 
 // Вывод текста из FireBase
 
-// function showTextFireBase (block, nameBlock, element) {
-// 	for(let itemName in block) {
-// 		if(itemName == 'title') {
-// 			document.getElementById(`${nameBlock + '-title'}`).innerHTML = block[itemName];
-// 		}
-// 		if(itemName == 'subtitle') {
-// 			document.getElementById(`${nameBlock + '-subtitle'}`).innerHTML = block[itemName];
-// 		}
-// 		if(itemName == 'text') {
-// 			document.getElementById(`${nameBlock + '-text'}`).innerHTML = block[itemName];
-// 		}
-// 		if(itemName == 'items') {
-// 			let itemsListOut = [];
-// 			block[itemName].forEach(item => {
-// 				let newObject = {...item}
-// 				console.log(item);
+
+if(window.location.pathname == '/index-ru.html') {
+
+	const getFireBase = firebase.database().ref('ru').on('value', (elem)=> {
+		const allInfo = elem.val();
+		for (let elem in allInfo) {
+			if(elem == 'main') {
+					document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+					document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+			}
+			if(elem == 'about') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="about__item">
+						<div class="about__item-content">
+							<h4 class="about__item-title">${item.title}</h4>
+							<p class="about__item-text">
+							${item.text}
+							</p>
+						</div>
+						<img src="${item.img}" alt="img">
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
+
+			}
+			if(elem == 'cases') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="cases__item">
+						<div class="cases__item-bg">
+							<img src="${item.bg}" alt="">
+						</div>
+						<img class="cases__item-img" src="${item.img}" alt="img">
+						<div  class="cases__item-box">
+							<h4 class="cases__item-title">
+								${item.title}
+							</h4>
+							<p class="cases__item-text">
+								${item.text}
+							</p>
+						</div>
+						
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
+
+			}
+			if(elem == 'video') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById('video-src').src = allInfo[elem]['src'];
+			}
+			if(elem == 'products') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				let btnsList = '';
+				allInfo[elem]['buttons'].forEach (item => {
+					btnsList += 
+					`
+						<button class="products-btn products-btn--size " >${item}</button>
+					`;
+				});
+				document.getElementById(`${elem}-btns`).innerHTML = btnsList;
+				let itemsList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemsList += 
+					`
+					<div class="products__item">
+						<img class="products__item-img" src="${item.img}" alt="img">
+						<p class="products__item-text">${item.text}</p>
+
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemsList;
+
+
+
+
+
+
+				const sliderBtns = document.querySelectorAll('.products-btn'),
+				sliderContents = document.querySelectorAll('.products__item');
+		
+				function hide () {
+						sliderBtns.forEach(item => {
+							item.classList.remove('products-btn--active');
 				
-// 				itemsListOut += element;
-// 			})
-// 			document.getElementById(`${nameBlock + '-items'}`).innerHTML = itemsListOut;
-// 		}
-// 	}
-// }
+						})
+						sliderContents.forEach(items => {
+							items.style.display = 'none';
+						})
+				
+				};
+				
+				
+				function showContent (i = 0) {
+					sliderContents[i].style.display = 'block';
+					sliderBtns[i].classList.add('products-btn--active');
+					
+				}
+				showContent();
+				sliderBtns.forEach ((item,index) => {
+					item.addEventListener('click', () => {
+						hide();
+						showContent(index)
+					})
+				})
+			}
+			if(elem == 'templates') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="templates__item">
+						<img class="templates__item-img" src="${item.img}" alt="img">
+						<h4 class="templates__item-title">
+							${item.title}
+						</h4>
+						<p class="templates__item-text">
+								${item.text}
+						</p>
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
 
+			}
+			if(elem == 'footer') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-btn`).textContent = allInfo[elem]['btn'];
+				document.getElementById(`${elem}-src`).textContent = allInfo[elem]['email'];
+				document.getElementById(`${elem}-src`).href = `mailto:${allInfo[elem]['email']}`;
 
+			}
+			if(elem == 'header') {
+				document.getElementById(`${elem}-btn`).textContent = allInfo[elem]['btn'];
+				
 
-
-// if(window.location.pathname == '/index-ru.html') {
-
-	// const aboutElement = 
-	// 	`
-	// 	<div class="about__item">
-	// 		<div class="about__item-content">
-	// 			<h4 class="about__item-title"> ${this.title}</h4>
-	// 			<p class="about__item-text">
-	// 				${this.text}
-	// 			</p>
-	// 		</div>
-	// 		<img src="img/about-img-1--en.png" alt="img">
-	// 	</div>
-	// 	`;
-	// const casesElement = 
-	// 	`
-	// 	<div class="cases__item">
-	// 		<div class="cases__item-bg">
-	// 			<img src="img/usage-item-bg-1.png" alt="">
-	// 		</div>
-	// 		<img class="cases__item-img" src="img/usage-item-img-1.png" alt="img">
-	// 		<div  class="cases__item-box">
-	// 			<h4 class="cases__item-title">
-	// 				${this.title}
-	// 			</h4>
-	// 			<p class="cases__item-text">
-	// 				${this.text}
-	// 			</p>
-	// 		</div>
+			}
 			
-	// 	</div>
-	// 	`;
-	// const productsElement = 
-	// 	`
-	// 	<div class="products__item">
-	// 		<img class="products__item-img" src="img/products-item-1.png" alt="img">
-	// 		<p class="products__item-text">${this.text}</p>
+			
+		}
+	})
+}
 
-	// 	</div>
-	// 	`;
-	// const templatesElement = 
-	// 	`
-	// 	<div class="templates__item">
-	// 		<img class="templates__item-img" src="img/templates-img-1.svg" alt="img">
-	// 		<h4 class="templates__item-title">
-	// 			${this.title}
-	// 		</h4>
-	// 		<p class="templates__item-text">
-	// 			${this.text}
-	// 		</p>
-	// 	</div>
-	// 	`;
-// 	const getFireBase = firebase.database().ref('ru').on('value', (elem)=> {
-// 		const allInfo = elem.val();
-// 		for (let elem in allInfo) {
-// 			if(elem == 'main') {
-// 				const nameBlock = elem;
-// 				const getBlock = allInfo[elem];
-// 				showTextFireBase (getBlock, nameBlock)
-// 			}
-// 			if(elem == 'about') {
-// 				const nameBlock = elem;
-// 				const getBlock = allInfo[elem];
-// 				showTextFireBase (getBlock, nameBlock, )
-// 			}
-// 		}
-// 	})
-// }
+if(window.location.pathname == '/index-en.html') {
+
+	const getFireBase = firebase.database().ref('ru').on('value', (elem)=> {
+		const allInfo = elem.val();
+		for (let elem in allInfo) {
+			if(elem == 'main') {
+					document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+					document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+			}
+			if(elem == 'about') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="about__item">
+						<div class="about__item-content">
+							<h4 class="about__item-title">${item.title}</h4>
+							<p class="about__item-text">
+							${item.text}
+							</p>
+						</div>
+						<img src="${item.img}" alt="img">
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
+
+			}
+			if(elem == 'cases') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="cases__item">
+						<div class="cases__item-bg">
+							<img src="${item.bg}" alt="">
+						</div>
+						<img class="cases__item-img" src="${item.img}" alt="img">
+						<div  class="cases__item-box">
+							<h4 class="cases__item-title">
+								${item.title}
+							</h4>
+							<p class="cases__item-text">
+								${item.text}
+							</p>
+						</div>
+						
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
+
+			}
+			if(elem == 'video') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById('video-src').src = allInfo[elem]['src'];
+			}
+			if(elem == 'products') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				let btnsList = '';
+				allInfo[elem]['buttons'].forEach (item => {
+					btnsList += 
+					`
+						<button class="products-btn products-btn--size " >${item}</button>
+					`;
+				});
+				document.getElementById(`${elem}-btns`).innerHTML = btnsList;
+				let itemsList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemsList += 
+					`
+					<div class="products__item">
+						<img class="products__item-img" src="${item.img}" alt="img">
+						<p class="products__item-text">${item.text}</p>
+
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemsList;
+
+
+
+
+
+
+				const sliderBtns = document.querySelectorAll('.products-btn'),
+				sliderContents = document.querySelectorAll('.products__item');
+		
+				function hide () {
+						sliderBtns.forEach(item => {
+							item.classList.remove('products-btn--active');
+				
+						})
+						sliderContents.forEach(items => {
+							items.style.display = 'none';
+						})
+				
+				};
+				
+				
+				function showContent (i = 0) {
+					sliderContents[i].style.display = 'block';
+					sliderBtns[i].classList.add('products-btn--active');
+					
+				}
+				showContent();
+				sliderBtns.forEach ((item,index) => {
+					item.addEventListener('click', () => {
+						hide();
+						showContent(index)
+					})
+				})
+			}
+			if(elem == 'templates') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
+				let itemList = '';
+				allInfo[elem]['items'].forEach (item => {
+					itemList += 
+					`
+					<div class="templates__item">
+						<img class="templates__item-img" src="${item.img}" alt="img">
+						<h4 class="templates__item-title">
+							${item.title}
+						</h4>
+						<p class="templates__item-text">
+								${item.text}
+						</p>
+					</div>
+					`;
+				});
+				document.getElementById(`${elem}-items`).innerHTML = itemList;
+
+			}
+			if(elem == 'footer') {
+				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-btn`).textContent = allInfo[elem]['btn'];
+				document.getElementById(`${elem}-src`).textContent = allInfo[elem]['email'];
+				document.getElementById(`${elem}-src`).href = `mailto:${allInfo[elem]['email']}`;
+
+			}
+			if(elem == 'header') {
+				document.getElementById(`${elem}-btn`).textContent = allInfo[elem]['btn'];
+				
+
+			}
+			
+			
+		}
+	})
+}
 
 
 
