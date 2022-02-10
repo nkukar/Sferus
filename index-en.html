@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/script.js" defer></script>
+	<script src="js/script-en.js" defer></script>
 	<title>Sferus</title>
 </head>
 
@@ -22,7 +22,7 @@
 					<a href="#" class="header__logo">
 						<img class="header__logo-img" src="img/logo.svg" alt="logo" >
 					</a>
-					<button class="header-btn modal-active" >Enter</button>
+					<button id="header-btn" class="header-btn modal-active" ></button>
 				</div>
 			</div>
 		</header>
@@ -32,12 +32,11 @@
 					<div class="main__box">
 						
 						<div class="main__gradient-box">
-							<h1 class="main__box-title">
-								SFERUS <br>
-								Connect360
+							<h1 id="main-title" class="main__box-title">
+								
 							</h1>
-							<p class="main__box-subtitle">
-								<span>For Reality.</span>
+							<p id="main-text" class="main__box-subtitle">
+								
 							</p>
 							<img class="main__box-img--pulse" src="img/main-img--pulse-en.png" alt="img" >
 						</div>
@@ -62,51 +61,18 @@
 	</div>
 	<section class="about">
 		<div class="container">
-			<h2 class="title">Presence adds value.</h2>
-			<p class="about-subtitle subtitle">
-				Introducing the Future of Visual Connection
-				with Support for 360° Video & VR
+			<h2 id="about-title" class="title"></h2>
+			<p id="about-subtitle" class="about-subtitle subtitle">
+				
 			</p>
 			
-			<p class="about-text">
-				SFERUS Connect360 is a platform for new, secure video-communication and real-time VR streaming using 360° video.
-				Connect360 works with most popular 360° (VR) cameras, mobile and pc devices and browsers, and VR headsets.
+			<p id="about-text" class="about-text">
+			
 				 
 			</p>
 
-			<div class="about__items">
-				<div class="about__item">
-					<div class="about__item-content">
-						<h4 class="about__item-title">Next-gen</h4>
-						<p class="about__item-text">
-							The next-generation
-							platform supports massively-scalable conference and
-							live-streaming sessions with independent, interactive 360° and VR
-							viewing for all participants.
-						</p>
-					</div>
-					<img src="img/about-img-1--en.png" alt="img">
-				</div>
-				<div class="about__item">
-					<div class="about__item-content">
-						<h4 class="about__item-title">For Beginners and Pros</h4>
-						<p class="about__item-text">
-							Anyone can easily connect via a pc or mobile browser, or with a VR headset. Setting up and sharing your own 360° sessions is just as simple and all you need is a supported
-							VR-camera connected to a PC or mobile device.
-						</p>
-					</div>
-					<img src="img/about-img-2--en.png" alt="img">
-				</div>
-				<div class="about__item">
-					<div class="about__item-content">
-						<h4 class="about__item-title">Experience Reality in VR</h4>
-						<p class="about__item-text">
-							Connect360 brings together the best of multi-user conferencing and VR real-time streaming, where one or several VR-cameras can be used
-							within a single Connect360 session. The platform can be comfortably used for personal, day-to-day connections.
-						</p>
-					</div>
-					<img src="img/about-img-3--en.png" alt="img">
-				</div>
+			<div id="about-items" class="about__items">
+				
 			</div>
 			
 			
@@ -114,205 +80,55 @@
 	</section>
 	<section class="cases">
 		<div class="container">
-			<h2 class="title">Business Use Cases</h2>
-			<p class="cases-text">
-				Unlike other conferencing platforms that either display
-				2D, non-immersive video or fully-virtual 3D
-				conference environments, 
-				Connect360 can “teleport”
-				participants to your location from anywhere in the world in VR, when you start or join a session using a
-				standard and widely-available VR-camera.
-				Connect360 is working together with our global partners to test novel areas of application. 
+			<h2 id="cases-title" class="title"></h2>
+			<p id="cases-text" class="cases-text">
+				
 
 			</p>
-			<div class="cases__items">
-				<div class="cases__item">
-					<div class="cases__item-bg">
-						<img src="img/usage-item-bg-1.png" alt="">
-					</div>
-					<img class="cases__item-img" src="img/usage-item-img-1.png" alt="img">
-					<div  class="cases__item-box">
-						<h4 class="cases__item-title">Corporate 
-							communication
-						</h4>
-						<p class="cases__item-text">Corporate (formal) and personal (informal) group communication in 360°/VR</p>
-					</div>
-					
-				</div>
-				<div class="cases__item">
-					<div class="cases__item-bg">
-						<img src="img/usage-item-bg-2.png" alt="">
-					</div>
-					<img class="cases__item-img" src="img/usage-img-2.png" alt="img">
-					<div class="cases__item-box">
-						<h4 class="cases__item-title">
-							Events
-						</h4>
-						<p class="cases__item-text">Multi-camera broadcasts, such as events, ceremonies, sports and virtual tourism
-						</p>
-					</div>
-					
-				</div>
-				<div class="cases__item">
-					<div class="cases__item-bg">
-						<img src="img/usage-item-bg.png" alt="">
-					</div>
-					<img class="cases__item-img" src="img/usage-img-3.png" alt="img">
-					<div class="cases__item-box">
-						<h4 class="cases__item-title">
-							Education
-						</h4>
-						<p class="cases__item-text">Educational engagement, webinars, virtual presence, examination real-time monitoring and recording</p>
-					</div>
-					
-				</div>
-				<div class="cases__item">
-					<div class="cases__item-bg">
-						<img src="img/usage-item-bg-4.png" alt="">
-					</div>
-					<img class="cases__item-img" src="img/usage-img-4.png" alt="img">
-					<div class="cases__item-box">
-						<h4 class="cases__item-title">
-							Real-estate
-						</h4>
-						<p class="cases__item-text">Remote property demonstrations and sales, inspections and audit of production facilities</p>
-					</div>
-					
-				</div>
+			<div id="cases-items" class="cases__items">
+				
 				
 			</div>
 		</div>
 	</section>
 	<section class="video">
 		<div class="container">
-			<h2 class="title video-title">Video</h2>
+			<h2 id="video-title" class="title video-title"></h2>
 			<div class="vider__inner">
-				<iframe class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe id="video-src" class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			
 		</div>
 	</section>
 	<section class="products">
 		<div class="container">
-			<h2 class="title products-title">Establishing a Connection</h2>
+			<h2 id="products-title" class="title products-title"></h2>
 			<div class="products__inner">
-				<div class="products__btns">
-					<button class="products-btn products-btn--active" >Web App</button>
-					<button  class="products-btn" >Mobile App</button>
-					<button   class="products-btn" >Onboard</button>
-					<button  class="products-btn" >VR Capabilities</button>
+				<div id="products-btns" class="products__btns">
+					
 				</div>
-				<div class="products__items">
-					<div class="products__item">
-						<img class="products__item-img" src="img/products-item-1.png" alt="img">
-						<p class="products__item-text">A Connect360 session can be started from
-							a personal computer (Windows® or Mac®)
-						  with a VR-camera that supports a wired USB 
-						  or HDMI connection for lowest latency.</p>
-
-					</div>
-					<div  class="products__item">
-						<img class="products__item-img" src="img/products-item-2.png" alt="img">
-						<p class="products__item-text">The Connect360 Mobile App can recieve
-							video from both a wireless and wired
-							connection to a VR camera, in order to
-							initiate or take part in a conference or 
-							start a real-time 360° live stream.</p>
-
-					</div>
-					<div  class="products__item">
-						<img class="products__item-img" src="img/products-item-3.png" alt="img">
-						<p class="products__item-text">We offer custom AI and MV integration for Connect360 business customers and we’re also developing custom 
-							plug-ins for specialised VR cameras that posess onboard processing capabilities.
-						</p>
-
-					</div>
-					<div  class="products__item">
-						<img class="products__item-img" src="img/products-item-4.png" alt="img">
-						<p class="products__item-text">Connect360 cross-platform VR support allows 
-							anyone taking park to see the VR-camera 
-							point-of-view from anywhere in the world, 
-							while retaining the ability to communicate 
-							with other session participnats.</p>
-
-					</div>
+				<div id="products-items" class="products__items">
+					
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="templates">
 		<div class="container">
-			<h2 class="title">Tested Templates</h2>
-			<p class="templates-text">Introducing VR-Priority layout and other scenario templates to help companies and individuals quickly choose the correct setup, where one
-				or several VR-cameras will be used within a single Connect360 session. Any participant can chose which 360° video source they want
-				to view in a Virtual Reality headset, fully independant of other connections.
+			<h2 id="templates-title" class="title"></h2>
+			<p id="templates-text" class="templates-text">
+
 			</p>
-			<div class="templates__items">
-				<div class="templates__item templates__item--en">
-					<img class="templates__item-img" src="img/templates-img-1.svg" alt="img">
-					<h4 class="templates__item-title">
-						VR-priority, with
-						secondary non-VR 
-					</h4>
-					<p class="templates__item-text">
-						For effective group communication, corporate
-						use scenarios with mixed sources,
-						VR-first webinars
-					</p>
-				</div>
-				<div class="templates__item templates__item--en">
-					<img class="templates__item-img" src="img/templates-img-2.svg" alt="img">
-					<h4 class="templates__item-title">
-						Multi-sphere <br>
-						grid view
-					</h4>
-					<p class="templates__item-text">
-						Usefull for large events and other multi-camera
-						setups such as real-time spatial
-						monitoring
-					</p>
-				</div>
-				<div class="templates__item templates__item--en ">
-					<img class="templates__item-img" src="img/templates-img-5.svg" alt="img">
-					<h4 class="templates__item-title">
-						Mixed (VR & non-VR)
-						grid view
-					</h4>
-					<p class="templates__item-text">
-						For a more casual communication experience, with the ability to view any participant in fullscreen.
-					</p>
-				</div>
-				<div class="templates__item templates__item--en">
-					<img class="templates__item-img" src="img/templates-img-3.svg" alt="img">
-					<h4 class="templates__item-title">
-						Presenter mode
-						<span class="no-wrap" >(Business & Enterprise)</span> 
-					</h4>
-					<p class="templates__item-text">
-						Focus participants’ attention on a specific
-						area of a 360° video, before
-						returning to grid view
-					</p>
-				</div>
+			<div id="templates-items" class="templates__items">
 				
-				<div class="templates__item templates__item--en">
-					<img class="templates__item-img" src="img/templates-img-4.svg" alt="img">
-					<h4 class="templates__item-title">
-						VR Workspace & Rooms
-						(Enterprise)
-					</h4>
-					<p class="templates__item-text">
-						Access to a customizable workspace with grouped video sources and static linking and embedding, as well as video analytics, cloud recording and other advanced tools.
-					</p>
-				</div>
 			</div>
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="container">
-			<h2 class="title footer-title">Ready to get started?</h2>
-			<button class="footer-btn modal-active" >Enter</button>
-			<a href="mailto:team@sferus.space" class="footer-link">team@sferus.space</a>
+			<h2 id="footer-title" class="title footer-title"></h2>
+			<button id="footer-btn" class="footer-btn modal-active" ></button>
+			<a id="footer-src" href="mailto:team@sferus.space" class="footer-link"></a>
 		</div>
 	</footer> 
 	
