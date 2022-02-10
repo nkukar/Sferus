@@ -146,8 +146,14 @@ formBtn.addEventListener('click', (e) => {
 // 			document.getElementById(`${nameBlock + '-text'}`).innerHTML = block[itemName];
 // 		}
 // 		if(itemName == 'items') {
-// 			let itemsListOut = '';
-// 			document.getElementById(`${nameBlock + '-items'}`).innerHTML = block[itemName];
+// 			let itemsListOut = [];
+// 			block[itemName].forEach(item => {
+// 				let newObject = {...item}
+// 				console.log(item);
+				
+// 				itemsListOut += element;
+// 			})
+// 			document.getElementById(`${nameBlock + '-items'}`).innerHTML = itemsListOut;
 // 		}
 // 	}
 // }
@@ -156,13 +162,69 @@ formBtn.addEventListener('click', (e) => {
 
 
 // if(window.location.pathname == '/index-ru.html') {
+
+	// const aboutElement = 
+	// 	`
+	// 	<div class="about__item">
+	// 		<div class="about__item-content">
+	// 			<h4 class="about__item-title"> ${this.title}</h4>
+	// 			<p class="about__item-text">
+	// 				${this.text}
+	// 			</p>
+	// 		</div>
+	// 		<img src="img/about-img-1--en.png" alt="img">
+	// 	</div>
+	// 	`;
+	// const casesElement = 
+	// 	`
+	// 	<div class="cases__item">
+	// 		<div class="cases__item-bg">
+	// 			<img src="img/usage-item-bg-1.png" alt="">
+	// 		</div>
+	// 		<img class="cases__item-img" src="img/usage-item-img-1.png" alt="img">
+	// 		<div  class="cases__item-box">
+	// 			<h4 class="cases__item-title">
+	// 				${this.title}
+	// 			</h4>
+	// 			<p class="cases__item-text">
+	// 				${this.text}
+	// 			</p>
+	// 		</div>
+			
+	// 	</div>
+	// 	`;
+	// const productsElement = 
+	// 	`
+	// 	<div class="products__item">
+	// 		<img class="products__item-img" src="img/products-item-1.png" alt="img">
+	// 		<p class="products__item-text">${this.text}</p>
+
+	// 	</div>
+	// 	`;
+	// const templatesElement = 
+	// 	`
+	// 	<div class="templates__item">
+	// 		<img class="templates__item-img" src="img/templates-img-1.svg" alt="img">
+	// 		<h4 class="templates__item-title">
+	// 			${this.title}
+	// 		</h4>
+	// 		<p class="templates__item-text">
+	// 			${this.text}
+	// 		</p>
+	// 	</div>
+	// 	`;
 // 	const getFireBase = firebase.database().ref('ru').on('value', (elem)=> {
 // 		const allInfo = elem.val();
 // 		for (let elem in allInfo) {
 // 			if(elem == 'main') {
 // 				const nameBlock = elem;
 // 				const getBlock = allInfo[elem];
-				
+// 				showTextFireBase (getBlock, nameBlock)
+// 			}
+// 			if(elem == 'about') {
+// 				const nameBlock = elem;
+// 				const getBlock = allInfo[elem];
+// 				showTextFireBase (getBlock, nameBlock, )
 // 			}
 // 		}
 // 	})

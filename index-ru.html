@@ -22,7 +22,7 @@
 					<a href="#" class="header__logo">
 						<img class="header__logo-img" src="img/logo.svg" alt="logo" >
 					</a>
-					<button class="header-btn modal-active" >Войти</button>
+					<button id="header-btn" class="header-btn modal-active" >Войти</button>
 				</div>
 			</div>
 		</header>
@@ -32,11 +32,11 @@
 					<div class="main__box">
 						
 						<div class="main__gradient-box">
-							<h1 class="main__box-title">
+							<h1 id="main-title" class="main__box-title">
 								SFERUS <br>
 								Connect360
 							</h1>
-							<p class="main__box-subtitle">
+							<p id="main-text" class="main__box-subtitle">
 								<span>For Reality.</span>
 							</p>
 							<img class="main__box-img--pulse" src="img/main-img--pulse-en.png" alt="img" >
@@ -62,13 +62,13 @@
 	</div>
 	<section class="about">
 		<div class="container">
-			<h2 class="title">Присутствие повышает ценность.</h2>
-			<p class="about-subtitle subtitle">
+			<h2 id="about-title" class="title">Присутствие повышает ценность</h2>
+			<p id="about-subtitle" class="about-subtitle subtitle">
 				Представляем Будущее Визуальной Связи
 				с Поддержкой Видео 360° и VR
 			</p>
 			
-			<p class="about-text">
+			<p id="about-text" class="about-text">
 				SFERUS Connect360 - это платформа для новой, безопасной видеосвязи и VR-стриминга в реальном времени с
 				использованием видео 360°. Connect360 работает с большинством популярных камер 360° (VR), мобильными и
 				компьютерными устройствами и браузерами, а также гарнитурами VR. Как подводное плавание связано с выходом в
@@ -76,7 +76,7 @@
 				гарнитуры VR.  
 			</p>
 
-			<div class="about__items">
+			<div id="about-items" class="about__items">
 				<div class="about__item">
 					<div class="about__item-content">
 						<h4 class="about__item-title">Следующее поколение</h4>
@@ -111,15 +111,15 @@
 	</section>
 	<section class="cases">
 		<div class="container">
-			<h2 class="title">Применение в бизнесе</h2>
-			<p class="cases-text">
+			<h2 id="cases-title" class="title">Применение в бизнесе</h2>
+			<p id="cases-text" class="cases-text">
 				В отличие от других платформ для конференций, которые отображают либо 2D, либо полностью виртуальную 3D-среду,
 				Connect360 может "телепортировать" участников в ваше местоположение из любой точки мира в VR, когда вы начинаете
 				или присоединяетесь к сессии, используя стандартную и широкодоступную VR-камеру. Наша команда, вместе с
 				партнерами, тестируют новые области применения Connect360. 
 
 			</p>
-			<div class="cases__items">
+			<div id="cases-items" class="cases__items">
 				<div class="cases__item">
 					<div class="cases__item-bg">
 						<img src="img/usage-item-bg-1.png" alt="">
@@ -184,15 +184,15 @@
 	</section>
 	<section class="video">
 		<div class="container">
-			<h2 class="title video-title">Видео</h2>
+			<h2 id="video-title" class="title video-title">Видео</h2>
 			<div class="vider__inner">
-				<iframe class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe id="video-src" class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
 	<section class="products">
 		<div class="container">
-			<h2 class="title products-title">Установка соединения</h2>
+			<h2 id="products-title" class="title products-title">Установка соединения</h2>
 			<div class="products__inner">
 				<div class="products__btns">
 					<button class="products-btn products-btn--active" >Web App</button>
@@ -200,7 +200,7 @@
 					<button   class="products-btn" >Onboard</button>
 					<button  class="products-btn" >VR Capabilities</button>
 				</div>
-				<div class="products__items">
+				<div id="products-items" class="products__items">
 					<div class="products__item">
 						<img class="products__item-img" src="img/products-item-1.png" alt="img">
 						<p class="products__item-text">Сеанс Connect360 можно начать с
@@ -230,14 +230,14 @@
 	</section>
 	<section class="templates">
 		<div class="container">
-			<h2 class="title">Сценарии использования</h2>
-			<p class="templates-text">
+			<h2 id="templates-title" class="title">Сценарии использования</h2>
+			<p id="templates-text" class="templates-text">
 				Представляем схему VR-Priority и другие шаблонные сценарии, которые помогут компаниям и частным лицам быстро
 				выбрать правильную настройку, где будет использоваться одна или несколько VR-камер в рамках одной сессии
 				Connect360. Любой участник сессии, независимо от других участников, может выбрать, какой источник видео 360° он
 				хочет просматривать в VR-гарнитуре.
 			</p>
-			<div class="templates__items">
+			<div id="templates-items" class="templates__items">
 				<div class="templates__item">
 					<img class="templates__item-img" src="img/templates-img-1.svg" alt="img">
 					<h4 class="templates__item-title">
@@ -262,11 +262,10 @@
 				<div class="templates__item">
 					<img class="templates__item-img" src="img/templates-img-5.svg" alt="img">
 					<h4 class="templates__item-title">
-						Mixed (VR & non-VR) <br>
-						grid view
+						Смешанные (VR и не VR) <br> вид сетки
 					</h4>
 					<p class="templates__item-text">
-						For a more casual communication experience, with the ability to view any participant in fullscreen.
+						Для более непринужденного общения, с возможностью просмотра любого участника в полноэкранном режиме.
 					</p>
 				</div>
 				<div class="templates__item">
@@ -283,11 +282,10 @@
 				<div class="templates__item">
 					<img class="templates__item-img" src="img/templates-img-4.svg" alt="img">
 					<h4 class="templates__item-title">
-						VR Workspace & Rooms <br>
-						(Enterprise)
+						Рабочее пространство и комнаты VR (Предприятие)
 					</h4>
 					<p class="templates__item-text">
-						Access to a customizable workspace with grouped video sources and static linking and embedding, as well as video analytics, cloud recording and other advanced tools.
+						Доступ к настраиваемому рабочему пространству с группировкой источников видео, статическим связыванием и встраиванием, а также к видеоаналитике, облачной записи и другим передовым инструментам.
 					</p>
 				</div>
 			</div>
@@ -295,8 +293,8 @@
 	</section>
 	<footer class="footer">
 		<div class="container">
-			<h2 class="title footer-title">Готовы начать?</h2>
-			<button class="footer-btn modal-active" >Войти</button>
+			<h2 id="footer-title" class="title footer-title">Готовы начать?</h2>
+			<button id="footer-btn" class="footer-btn modal-active" >Войти</button>
 			<a href="mailto:team@sferus.space" class="footer-link">team@sferus.space</a>
 		</div>
 	</footer> 

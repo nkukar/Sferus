@@ -121,9 +121,10 @@ body {
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #222222;
-	margin-bottom: 40px;
+	max-width: 280px;
+	margin: 0 auto 40px;
 }
-.main__box-subtitle span {
+.main__box-subtitle  {
 	display: block;
 	font-weight: normal;
 	font-size: 34px;
@@ -644,7 +645,7 @@ body {
 		color: #222222;
 		margin-bottom: 6px;
 	}
-	.main__box-subtitle span {
+	.main__box-subtitle  {
 		font-weight: normal;
 		font-size: 11px;
 		line-height: 17px;
