@@ -355,7 +355,7 @@ body {
 }
 .video__inner-item {
 	object-fit: cover;
-	max-width: 33.33%;
+	max-width: 25%;
 	
 }
 .video-main {
