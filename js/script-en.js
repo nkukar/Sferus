@@ -164,7 +164,7 @@ const getFireBase = firebase.database().ref('en').on('value', (elem)=> {
 		}
 		if(elem == 'video') {
 			document.getElementById('video-title').textContent = allInfo[elem]['title'];
-			document.getElementById('video-src').src = allInfo[elem]['src'];
+			// document.getElementById('video-src').src = allInfo[elem]['src'];
 		}
 		if(elem == 'products') {
 			
