@@ -22,7 +22,11 @@
 					<a href="#" class="header__logo">
 						<img class="header__logo-img" src="img/logo.svg" alt="logo" >
 					</a>
-					<button id="header-btn" class="header-btn modal-active" >Запросить доступ</button>
+					<div class="header__box">
+						<button id="header-btn" class="header-btn modal-active" >Запросить доступ</button>
+						<a id="header-link" href="#" class="header-link">Switch to Eng></a>
+					</div>
+					
 				</div>
 			</div>
 		</header>
@@ -172,6 +176,9 @@
 	<section class="video">
 		<div class="container">
 			<h2 id="video-title" class="title video-title">Видео</h2>
+			<p id="video-subtitle" class="video-text">
+				
+			</p>
 			<div class="vider__inner">
 				<iframe id="video-src" class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
@@ -266,11 +273,13 @@
 					демонстрацию</p>
 				<form action="#">
 					<p class="input-name">ФИО</p>
-					<input class="modal-input" type="text">
+					<input id="name" class="modal-input--val modal-input" type="text">
 					<p class="input-name">Электронная почта</p>
-					<input class="modal-input" type="text">
+					<input id="mail" class="modal-input--val modal-input" type="text">
 					<p class="input-name">Контактный телефон</p>
-					<input class="modal-input" type="text">
+					<input id="tel" class="modal-input--val modal-input" type="text">
+					<p class="input-name">Сообщение</p>
+					<textarea id="message"   class="modal-input--val modal-message" name="text"   cols="30" rows="5"></textarea>
 					<div class="form-action">
 						Данная форма собирает информацию, которую вы предоставляете, установив
 						флажок, вы соглашаетесь с обработкой Sferus360 всех данных, предоставленных 
@@ -288,6 +297,14 @@
 		</div>
 		
 	</div> 
+	<div class="modal-done">
+		<div class="modal-done__inner">
+			<div class="modal-done__content">
+				<img class="modal-done-img" src="img/modal-done-img.svg" alt="img">
+				<p class="modal-done-text">Спасибо! Мы свяжемся с вами в ближайшее время!</p>
+			</div>
+		</div>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.min.js"></script>
 </body>
 

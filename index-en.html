@@ -94,14 +94,12 @@
 	<section class="video">
 		<div class="container">
 			<h2 id="video-title" class="title video-title"></h2>
-			<div class="video__inner">
-				<video autoplay id="video-src" class="video__inner-item"  src="https://firebasestorage.googleapis.com/v0/b/sferus360-aee4a.appspot.com/o/video-item.mp4?alt=media&token=76ffeeea-7abd-4e10-99ae-6236b95d1ab0" ></video>
-				<video autoplay id="video-src" class="video__inner-item"  src="https://firebasestorage.googleapis.com/v0/b/sferus360-aee4a.appspot.com/o/video-item.mp4?alt=media&token=76ffeeea-7abd-4e10-99ae-6236b95d1ab0" ></video>
-				<video autoplay id="video-src" class="video__inner-item"  src="https://firebasestorage.googleapis.com/v0/b/sferus360-aee4a.appspot.com/o/video-item.mp4?alt=media&token=76ffeeea-7abd-4e10-99ae-6236b95d1ab0" ></video>
-				<video autoplay id="video-src" class="video__inner-item"  src="https://firebasestorage.googleapis.com/v0/b/sferus360-aee4a.appspot.com/o/video-item.mp4?alt=media&token=76ffeeea-7abd-4e10-99ae-6236b95d1ab0" ></video>
+			<p id="video-subtitle" class="video-text">
+				
+			</p>
+			<div class="vider__inner">
+				<iframe id="video-src" class="video-item"  src="https://www.youtube.com/embed/4EoUz39nPMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<video autoplay id="video-src" class="video-main"  src="https://firebasestorage.googleapis.com/v0/b/sferus360-aee4a.appspot.com/o/main-video.mp4?alt=media&token=d163ab56-899e-4dd6-ae94-5cbe50c9de3d" ></video>
-			
 			
 		</div>
 	</section>
@@ -150,11 +148,13 @@
 					demonstration</p>
 				<form action="#">
 					<p class="input-name">Name</p>
-					<input class="modal-input" type="text">
+					<input id="name" class="modal-input--val modal-input" type="text">
 					<p class="input-name">Email</p>
-					<input class="modal-input" type="text">
+					<input id="email" class="modal-input--val modal-input" type="text">
 					<p class="input-name">Contact phone number</p>
-					<input class="modal-input" type="text">
+					<input id="tel" class="modal-input--val modal-input" type="text">
+					<p class="input-name">Message</p>
+					<textarea id="message"   class="modal-input--val modal-message" name="text"   cols="30" rows="5"></textarea>
 					<div class="form-action">
 						This form collects the information that you provide by installing
 						check box, you agree to the processing of all data provided by Sferus360
@@ -169,9 +169,19 @@
 				</form>
 	
 			</div>
+			
 		</div>
 		
 	</div> 
+	<div class="modal-done">
+		<div class="modal-done__inner">
+			<div class="modal-done__content">
+				<img class="modal-done-img" src="img/modal-done-img.svg" alt="img">
+				<p class="modal-done-text">Thaks! We’ll be in touch shortly!</p>
+			</div>
+		</div>
+	</div>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.min.js"></script>
 </body>
 
