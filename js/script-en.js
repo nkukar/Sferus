@@ -267,7 +267,7 @@ const getFireBase = firebase.database().ref('en').on('value', (elem)=> {
 		}
 		if(elem == 'header') {
 			document.getElementById(`${elem}-btn`).textContent = allInfo[elem]['btn'];
-			
+			document.getElementById(`${elem}-link`).href = allInfo[elem]['link'];
 
 		}
 		

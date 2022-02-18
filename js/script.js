@@ -154,6 +154,7 @@ const form = document.querySelector('form'),
 			}
 			if(elem == 'cases') {
 				document.getElementById(`${elem}-title`).textContent = allInfo[elem]['title'];
+				document.getElementById(`${elem}-text`).textContent = allInfo[elem]['text'];
 				let itemList = '';
 				allInfo[elem]['items'].forEach (item => {
 					itemList += 
